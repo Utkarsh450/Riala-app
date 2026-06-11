@@ -70,12 +70,12 @@ const BlogCard = ({
 
 const BlogSection = () => {
   return (
-    <section className="w-full bg-white px-4 sm:px-10 md:px-16 lg:px-24 py-12 sm:py-16">
+    <section className="w-full bg-white px-4 sm:px-10 md:mt-28 md:px-16 lg:px-24 py-12 sm:py-16">
 
       {/* Header */}
       <div className="flex items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
         <div>
-          <p className="text-sm sm:text-base font-medium text-[#1a1f36]">
+          <p className="text-sm sm:text-base font-semibold text-zinc-800">
             Get to know Riala With Our
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#4f6ef7] leading-tight">

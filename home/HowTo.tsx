@@ -37,12 +37,12 @@ const steps = [
 
 const HowToStart = () => {
   return (
-    <section id="howto" className="w-full bg-zinc-100 px-4 sm:px-8 md:px-16 lg:px-24 py-14 sm:py-20">
+    <section id="howto" className="w-full font-['inter'] bg-zinc-100 px-4 sm:px-8 md:px-16 lg:px-24 py-14 sm:py-20">
 
       {/* Heading */}
       <div className="flex flex-col items-center text-center gap-2 mb-12 sm:mb-16">
         <span className="text-xs text-zinc-400 font-medium">Bonus 🎁</span>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1f36] leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#1a1f36] leading-tight">
           How To Start Using Riala Pay?
         </h2>
       </div>

@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import phone from "../public/mobile1.png"; // apna actual phone mockup image use karo
-
+import logo from "../public/Logo.png";
 const footerLinks = {
   Product: ["Patch", "Updates", "Careers"],
   Company: ["Patch", "Api", "Beta Test"],
@@ -11,7 +11,7 @@ const footerLinks = {
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full mt-28 md:mt-36 bg-white">
       {/* Phone + arc rings */}
       <div className="relative w-full flex justify-center items-end overflow-hidden bg-white pt-12 h-[260px] sm:h-[360px]">
         {/* Arc rings */}
@@ -43,16 +43,7 @@ export default function FooterSection() {
           {/* Brand + newsletter */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <svg width="32" height="32" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="43" height="35" rx="6" fill="url(#logoGrad)" />
-                <path d="M10 8h12c4.4 0 8 3.6 8 8s-3.6 8-8 8h-4l8 8H20l-8-8v8h-2V8z M12 10v10h10c3.3 0 6-2.7 6-6s-2.7-6-6-6H12z" fill="white" />
-                <defs>
-                  <linearGradient id="logoGrad" x1="0" y1="0" x2="43" y2="35" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#7C3AED" />
-                    <stop offset="1" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <Image src={logo} alt="logo" width={25} height={25}/>
               <span className="text-2xl font-bold text-gray-900 tracking-tight">Riala</span>
             </div>
 

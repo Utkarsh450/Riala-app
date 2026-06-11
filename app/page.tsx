@@ -26,9 +26,9 @@ const Home = () => {
       <Marquee/>
       <Download/>
       <CoreFeatures/>
-      <HowToStart/>
-      
       <Why/>
+      
+      <HowToStart/>
       <CTABanner/>
       <Reviews/>
       <Blog/>

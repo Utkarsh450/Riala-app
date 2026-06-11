@@ -109,30 +109,31 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section id="reviews" className="w-full bg-[#f8f9fb] px-22 py-14 sm:py-20">
+    <section id="reviews" className="w-full font-['inter'] bg-[#f8f9fb] px-22 py-14 sm:py-20">
 
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5
-                      px-4 sm:px-10 md:px-16 lg:px-24 mb-8 sm:mb-10">
+    {/* Header */}
+<div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5
+                px-4 sm:px-10 md:px-16 lg:px-24 mb-8 sm:mb-10">
 
-        {/* Left: badge + heading */}
-        <div className="flex flex-col gap-3">
-          <span className="self-start flex items-center gap-1.5 text-xs font-medium
-                           text-[#4f6ef7] border border-[#c7d2fe] bg-white
-                           px-3 py-1.5 rounded-full">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                 stroke="#4f6ef7" strokeWidth="1.5">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-            Trusted By 200K+ Clients
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1f36] leading-tight">
-            What Our Clients Say About Us?
-          </h2>
-        </div>
+  {/* Left: badge + heading */}
+  <div className="flex flex-col gap-3 items-center sm:mx-auto text-center w-full sm:w-auto sm:items-start sm:text-left">
+    <span className="self-center sm:self-center flex items-center gap-1.5 text-xs font-medium
+                     text-zinc-50 border border-[#c7d2fe] bg-[#4f6ef7]
+                     px-3 py-1.5 rounded-full">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+           stroke="#4f6ef7" strokeWidth="1.5">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      Trusted By 200K+ Clients
+    </span>
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1f36] leading-tight">
+      What Our Clients Say About Us?
+    </h2>
+  </div>
 
-        {/* Right: scroll buttons */}
-        <div className="flex items-center gap-2 self-start sm:self-end shrink-0">
+  {/* Right: scroll buttons */}
+  <div className="flex items-center gap-2 self-center sm:self-end shrink-0">
           <button
             onClick={() => scroll('left')}
             disabled={!canScrollLeft}
