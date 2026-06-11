@@ -41,7 +41,7 @@ const HowToStart = () => {
 
       {/* Heading */}
       <div className="flex flex-col items-center text-center gap-2 mb-12 sm:mb-16">
-        <span className="text-xs text-zinc-400 font-medium">Bonus 🎁</span>
+        <span className="text-xs text-zinc-400 font-medium">Bonus</span>
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#1a1f36] leading-tight">
           How To Start Using Riala Pay?
         </h2>

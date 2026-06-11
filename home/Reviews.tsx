@@ -109,12 +109,12 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section id="reviews" className="w-full font-['inter'] bg-[#f8f9fb] px-22 py-14 sm:py-20">
+    <section id="reviews" className="w-full font-['inter'] bg-[#f8f9fb] px-4 sm:px-6 md:px-10 lg:px-16 xl:px-22 py-14 sm:py-20">
 
       {/* Header */}
     {/* Header */}
 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5
-                px-4 sm:px-10 md:px-16 lg:px-24 mb-8 sm:mb-10">
+                px-2 sm:px-8 md:px-12 lg:px-24 mb-8 sm:mb-10">
 
   {/* Left: badge + heading */}
   <div className="flex flex-col gap-3 items-center sm:mx-auto text-center w-full sm:w-auto sm:items-start sm:text-left">
@@ -127,14 +127,13 @@ const ReviewsSection = () => {
       </svg>
       Trusted By 200K+ Clients
     </span>
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1f36] leading-tight">
+    <h2 className="text-[24px] sm:text-[32px] md:text-[40px] font-bold text-[#1a1f36] leading-tight">
       What Our Clients Say About Us?
     </h2>
   </div>
 
   {/* Right: scroll buttons */}
-  <div className="flex items-center gap-2 self-center sm:self-end shrink-0">
-          <button
+<div className="hidden sm:flex items-center gap-2 self-center sm:self-end shrink-0">          <button
             onClick={() => scroll('left')}
             disabled={!canScrollLeft}
             aria-label="Scroll left"
@@ -165,7 +164,7 @@ const ReviewsSection = () => {
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto scroll-smooth pb-2
-                   px-4 sm:px-10 md:px-16 lg:px-24
+                  px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24
                    snap-x snap-mandatory
                    [&::-webkit-scrollbar]:hidden
                    [-ms-overflow-style:none]
@@ -174,10 +173,12 @@ const ReviewsSection = () => {
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="snap-start flex-shrink-0 flex flex-col gap-4
-                       w-[78vw] sm:w-[280px] md:w-[300px] lg:w-[290px] xl:w-[310px]
-                       bg-white rounded-2xl border border-zinc-100
-                       p-5 sm:p-6 shadow-sm"
+            className="
+snap-start flex-shrink-0 flex flex-col gap-4
+w-[92vw] max-w-[420px] sm:w-[320px] md:w-[340px] lg:w-[290px] xl:w-[310px]
+bg-white rounded-2xl border border-zinc-100
+p-5 sm:p-6 shadow-sm
+"
           >
             {/* Stars */}
             <Stars count={r.stars} />
