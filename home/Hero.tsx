@@ -5,6 +5,8 @@ import mobile2 from "../public/Mobile2.png"
 import man from "../public/man.png"
 import girl from "../public/girl.png"
 
+import { Phone } from "lucide-react"
+
 const Hero = () => {
   return (
     <div className="w-full font-inter mt-4 lg:min-h-screen bg-zinc-100 overflow-hidden">
@@ -15,7 +17,7 @@ const Hero = () => {
         {/* Background circles */}
         <div className="absolute left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none"
           style={{ width: '1275px', height: '1275px' }} />
-        <div className="absolute left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/40 pointer-events-none"
+        <div className="absolute left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/40 pointer-events-none"
           style={{ width: '625px', height: '625px' }} />
         <div className="absolute left-[47%] -translate-x-1/2 top-[65%] -translate-y-1/2 rounded-full pointer-events-none"
           style={{ width: '380px', height: '380px' }} />
@@ -27,7 +29,7 @@ const Hero = () => {
             <div className="relative mr-28 mt-14 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
                 <Image src={man} alt="man" width={80} height={95}
-                  className="absolute -top-3 left-0 w-full object-cover object-top" />
+                  className="absolute bottom-0 left-0 w-full object-cover object-top" />
               </div>
             </div>
             <h1 className="text-9xl ml-10 font-['satoshi'] z-2 tracking-tight text-[#43495B]">To Riala</h1>
@@ -36,7 +38,7 @@ const Hero = () => {
 
         {/* Bottom row */}
         <div className="w-full flex items-center justify-between px-34 py-10 mt-10">
-          <h1 className="font-semibold font-['inter'] text-[#43495B] text-2xl z-10 relative">
+          <h1 className="font-semibold font-['inter'] -left-4 top-22 text-[#43495B] text-2xl z-10 relative">
             The ultimate finance <br /> application is here...
           </h1>
           <Image className="absolute top-14 left-0 translate-x-115 translate-y-44 z-10"
@@ -119,16 +121,16 @@ const Hero = () => {
         <div className="relative w-full flex items-end justify-center" style={{ minHeight: '420px' }}>
 
           {/* Title — behind phone */}
-          <div className="absolute top-4 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
+          <div className="absolute -top-2 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
-              style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
+              className="text-7xl font-['satoshi'] tracking-tight text-[#43495B] mr-10 leading-none text-center"
+              // style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
             >
               Welcome
             </h1>
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
-              style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
+              className="text-7xl  font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
+              // style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
             >
               To Riala
             </h1>
@@ -143,7 +145,7 @@ const Hero = () => {
             style={{ width: '155px', height: '155px' }} />
 
           {/* Main phone — front, shifted slightly right */}
-          <div className="relative z-30" style={{ transform: 'translateX(-8%)' }}>
+          <div className="relative z-30 top-2" style={{ transform: 'translateX(-8%)' }}>
             <Image
               src={mobile2}
               alt="Riala App"
@@ -164,7 +166,8 @@ const Hero = () => {
               ▶ Watch Tizer
             </div>
             <div className="flex items-center gap-2 px-4 py-2 font-medium text-xs rounded-2xl text-zinc-800 bg-zinc-50 border border-zinc-300 cursor-pointer">
-              📞 Contact Us
+              
+              <Phone size="15"/> Contact Us
             </div>
           </div>
         </div>

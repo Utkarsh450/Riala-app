@@ -20,31 +20,36 @@ const CTABanner = () => {
         </div>
 
         {/* Text content */}
-        <div className="relative z-10 flex flex-col gap-4 w-full px-8 py-12
-                        items-center text-center
-                        md:items-start md:text-left
-                        md:pl-[300px] lg:pl-[340px] md:pr-12 lg:pr-20">
+      
+    
+    
+      <div
+  className="relative z-10 flex flex-col gap-4 w-full
+  px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12
+  items-center text-center
+  md:items-start md:text-left
+  md:pl-[300px] lg:pl-[340px] md:pr-12 lg:pr-20"
+>
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
+    Ready? Let's Start with{" "}
+    <span className="font-semibold text-[#052999]">Riala Pay {" "}</span>
+    <br className="hidden sm:block" />
+    and Get{" "}
+    <span className="font-semibold text-[#052999]">
+      Awesome Experience!
+    </span>
+  </h2>
 
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
-            Ready? Let's Start with{' '}
-            <span className="font-semibold text-[#052999]">Riala Pay</span>
-            <br />
-            and Get{' '}
-            <span className="font-semibold text-[#052999]">Awesome Experience!</span>
-          </h2>
+  <p className="text-xs sm:text-sm text-white/75 leading-relaxed max-w-[280px] sm:max-w-sm">
+    Simplify your payments with Riala Pay. Paying bills and making
+    transactions has never been easier.
+  </p>
 
-          <p className="text-sm text-white/75 leading-relaxed max-w-sm">
-            Simplify you payments with Riala Pay, Simplify you payments with
-            Riala Pay, Paying bills nad making transactions has never been
-            easier. Paying bills nad making.
-          </p>
-
-          <button className="flex items-center gap-2 bg-[#43495B] hover:bg-[#43495B]/85 text-white text-sm font-medium px-5 h-[38px] rounded-xl transition-all mt-1">
-            <Play size={14} fill="white" className="shrink-0" />
-            <span className="leading-none">Watch Tizer</span>
-          </button>
-
-        </div>
+  <button className="flex items-center gap-2 bg-[#43495B] hover:bg-[#43495B]/85 text-white text-sm font-medium px-5 h-[38px] rounded-xl transition-all mt-1">
+    <Play size={14} fill="white" className="shrink-0" />
+    <span className="leading-none">Watch Teaser</span>
+  </button>
+</div>
       </div>
     </section>
   );
