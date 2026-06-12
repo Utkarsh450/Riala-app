@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 const DownloadSection = () => {
   return (
     <div id="download" className="w-full px-4 sm:px-6 md:px-22 py-6 bg-zinc-100">
-      <div className="w-full rounded-3xl bg-white font-['satoshi'] px-6 sm:px-8 md:px-28 py-8 md:py-10 border border-[#E0E2E8] overflow-hidden">
+      <div className="w-full rounded-3xl bg-white hi'] px-6 sm:px-8 md:px-28 py-8 md:py-10 border border-[#E0E2E8] overflow-hidden">
         <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-6">
 
          {/* LEFT CONTENT */}
@@ -21,7 +21,7 @@ const DownloadSection = () => {
   </div>
 
   {/* Headline */}
-  <div className="flex flex-col w-full md:w-100 gap-0">
+  <div className="flex items-center gap-2 justify-center w-full md:w-100 gap-0">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#43495B] leading-tight tracking-tight">
       Download Riala Pay
     </h1>
@@ -31,13 +31,13 @@ const DownloadSection = () => {
   </div>
 
   {/* Description */}
-  <p className="text-zinc-400 text-base leading-relaxed max-w-xs">
+  <p className="text-zinc-400 text-base leading-relaxed max-w-md">
     Simplify you payments with Riala Pay, Paying bills nad making
     transactions has never been easier.
   </p>
 
   {/* Buttons */}
- <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-stretch gap-3 w-full md:w-auto">
+ <div className="flex sm:flex-row md:flex-col lg:flex-row items-stretch gap-3 w-full md:w-auto">
 
   {/* IOS Button */}
   <button
