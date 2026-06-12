@@ -11,22 +11,37 @@ const footerLinks = {
 
 export default function FooterSection() {
   return (
-    <footer className="w-full mt-28 md:mt-36 bg-white">
+    <footer className="w-full bg-white">
       {/* Phone + arc rings */}
       <div className="relative w-full flex justify-center items-end overflow-hidden bg-white pt-12 h-[260px] sm:h-[360px]">
         {/* Arc rings */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-          {[160, 240, 320, 400, 480].map((r, i) => (
-            <div
-              key={i}
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 border border-gray-200 rounded-t-full"
-              style={{ width: r * 2, height: r }}
-            />
-          ))}
-        </div>
+       {/* Arc rings — centered behind phone */}
+{/* Arc rings — centered behind phone, full circles */}
+<div className="absolute inset-0 flex items-center justify-center">
+  <div className="relative" style={{ width: 0, height: 0 }}>
+    {[100, 160, 220, 280, 340].map((r, i) => (
+      <div
+        key={i}
+        className="absolute rounded-full border border-gray-200"
+        style={{
+          width: r * 2,
+          height: r * 2,
+          top: -r,
+          left: -r,
+        }}
+      />
+    ))}
+  </div>
+</div>
+
+{/* White fade at bottom */}
+<div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-20" />
+
+{/* White fade at bottom */}
+<div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-20" />
 
         {/* Phone image — cropped from bottom, top portion visible */}
-        <div className="relative z-10 w-[150px] sm:w-[190px] h-[220px] sm:h-[300px] overflow-hidden">
+        <div className="relative z-10 w-[150px] sm:w-[200px] h-[220px] sm:h-[280px] overflow-hidden">
           <Image
             src={phone}
             alt="Riala App"
