@@ -43,7 +43,7 @@ const CoreFeatures = () => {
   }, []);
 
   return (
-    <div id="features" className="w-full sm:mt-28 md:mt-36 bg-white font-['satoshi'] px-6 py-12 sm:px-16 sm:py-16 lg:px-24">
+    <div id="features" className="w-full sm:mt-28 md:mt-36 bg-white hi'] px-6 py-12 sm:px-16 sm:py-16 lg:px-24">
       <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-22">
 
         {/* LEFT */}

@@ -29,7 +29,7 @@ const Hero = () => {
 
         {/* Title */}
 <div className="relative z-20 flex flex-col items-center gap-4 pt-2">        
-    <h1 className="text-9xl font-['satoshi'] mr-56 tracking-tight text-[#43495B]">
+    <h1 className="text-9xl hi'] mr-56 tracking-tight text-[#43495B]">
             Welcome
           </h1>
           <div className="flex gap-4 mr-20">
@@ -43,7 +43,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <h1 className="text-9xl ml-10 font-['satoshi'] z-2 tracking-tight text-[#43495B]">
+            <h1 className="text-9xl ml-10 hi'] z-2 tracking-tight text-[#43495B]">
               To Riala
             </h1>
           </div>
@@ -116,11 +116,11 @@ const Hero = () => {
   >
     {/* Title */}
     <div className="absolute top-16 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none">
-      <h1 className="text-[84px] font-['satoshi'] tracking-tight text-[#43495B] leading-none">
+      <h1 className="text-[84px] hi'] tracking-tight text-[#43495B] leading-none">
         Welcome
       </h1>
 
-      <h1 className="text-[84px] font-['satoshi'] tracking-tight text-[#43495B] leading-none ml-16 -mt-2">
+      <h1 className="text-[84px] hi'] tracking-tight text-[#43495B] leading-none ml-16 -mt-2">
         To Riala
       </h1>
     </div>
@@ -213,12 +213,12 @@ const Hero = () => {
           {/* Title — behind phone */}
           <div className="absolute top-2 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B] mr-16 leading-none text-7xl text-center"
+              className="hi'] tracking-tight text-[#43495B] mr-16 leading-none text-7xl text-center"
             >
               Welcome
             </h1>
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B]  text-7xl leading-none text-center"
+              className="hi'] tracking-tight text-[#43495B]  text-7xl leading-none text-center"
             >
               To Riala
             </h1>
