@@ -1,3 +1,4 @@
+import { Info } from 'lucide-react';
 import React from 'react';
 
 const steps = [
@@ -41,7 +42,7 @@ const HowToStart = () => {
 
       {/* Heading */}
       <div className="flex flex-col items-center text-center gap-2 mb-12 sm:mb-16">
-        <span className="text-xs text-zinc-400 font-medium">Bonus</span>
+        <span className="text-xs text-zinc-400 font-medium flex gap-2 items-center">Bonus  <Info size={8} /></span>
         <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-[#1a1f36] leading-tight">
           How To Start Using Riala Pay?
         </h2>
@@ -52,7 +53,7 @@ const HowToStart = () => {
         {steps.map((s) => (
           <div key={s.step} className="flex flex-col items-center text-center gap-2">
             {/* Icon circle */}
-            <div className="w-12 h-12 rounded-full bg-[#eef0fd] flex items-center justify-center mb-2">
+            <div className="w-12 h-12 rounded-full bg-[#EBF0FE] flex items-center justify-center mb-2">
               {s.icon}
             </div>
             {/* Step label */}
@@ -60,7 +61,7 @@ const HowToStart = () => {
             {/* Title */}
             <h3 className="text-base font-bold text-[#1a1f36]">{s.title}</h3>
             {/* Desc */}
-            <p className="text-xs text-zinc-400 leading-relaxed max-w-[220px]">{s.desc}</p>
+            <p className="text-sm text-zinc-400 leading-relaxed max-w-[220px]">{s.desc}</p>
           </div>
         ))}
       </div>
