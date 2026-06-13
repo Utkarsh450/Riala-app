@@ -24,7 +24,7 @@ const Hero = () => {
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
-          <h1 className="text-9xl font-['satoshi'] mr-56 tracking-tight text-[#43495B]">Welcome</h1>
+          <h1 className="text-9xl mr-56 tracking-tight text-[#43495B]">Welcome</h1>
           <div className="flex gap-4 mr-20">
             <div className="relative mr-28 mt-14 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
@@ -32,7 +32,7 @@ const Hero = () => {
                   className="absolute bottom-0 left-0 w-full object-cover object-top" />
               </div>
             </div>
-            <h1 className="text-9xl ml-10 font-['satoshi'] z-2 tracking-tight text-[#43495B]">To Riala</h1>
+            <h1 className="text-9xl ml-10 z-2 tracking-tight text-[#43495B]">To Riala</h1>
           </div>
         </div>
 
@@ -67,13 +67,13 @@ const Hero = () => {
           {/* Title — behind everything, large, centered at top */}
           <div className="absolute top-6 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
+              className=" tracking-tight text-[#43495B] leading-none text-center"
               style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}
             >
               Welcome
             </h1>
             <h1
-              className="font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
+              className=" tracking-tight text-[#43495B] leading-none text-center"
               style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}
             >
               To Riala
@@ -123,13 +123,13 @@ const Hero = () => {
           {/* Title — behind phone */}
           <div className="absolute -top-2 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
             <h1
-              className="text-7xl font-['satoshi'] tracking-tight text-[#43495B] mr-10 leading-none text-center"
+              className="text-7xl tracking-tight text-[#43495B] mr-10 leading-none text-center"
               // style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
             >
               Welcome
             </h1>
             <h1
-              className="text-7xl  font-['satoshi'] tracking-tight text-[#43495B] leading-none text-center"
+              className="text-7xl tracking-tight text-[#43495B] leading-none text-center"
               // style={{ fontSize: 'clamp(3rem, 13vw, 4.5rem)' }}
             >
               To Riala
