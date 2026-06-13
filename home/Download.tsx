@@ -2,12 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import Merged from "../public/Merged.png"
 import { ArrowRight } from 'lucide-react';
+import MobileView from "../public/Mobileview.png"
 
 const DownloadSection = () => {
   return (
     <div id="download" className="w-full px-4 sm:px-6 md:px-22 py-6 bg-zinc-100">
       <div className="w-full rounded-3xl bg-white hi'] px-6 sm:px-8 md:px-28 py-8 md:py-10 border border-[#E0E2E8] overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-1">
 
          {/* LEFT CONTENT */}
 <div className="flex flex-col gap-5 w-full md:max-w-[520px] z-10 items-center text-center md:items-start md:text-left">  {/* Achievement badge */}
@@ -124,29 +125,22 @@ const DownloadSection = () => {
 </div>
 
         {/* RIGHT: Mobile image */}
-<div
-  className="
-    relative
-    flex items-center justify-center md:justify-end
-    flex-1 w-full
-    h-[240px]
-    sm:h-[300px]
-    md:h-[340px]
-    lg:h-[420px]
-  "
->
+{/* RIGHT: Mobile image */}
+<div className="relative flex items-center mt-22 justify-center md:justify-end md:w-[45%] w-full h-[240px] sm:h-[300px] md:h-[300px] lg:h-[420px]">
+  
+  {/* Mobile only — MobileView image, bigger */}
+  <Image
+    src={MobileView}
+    alt="mobile"
+    className="md:hidden object-contain w-[260px] sm:w-[320px] h-auto"
+    priority
+  />
+
+  {/* Desktop only — Merged image, bigger */}
   <Image
     src={Merged}
     alt="mobile"
-    className="
-      object-contain
-      w-[220px]
-      sm:w-[280px]
-      md:w-[360px]
-      lg:w-[500px]
-      h-auto
-      lg:-translate-x-6
-    "
+    className="hidden md:block object-contain md:w-[320px] lg:w-[420px] h-auto lg:-translate-x-6"
     priority
   />
 </div>

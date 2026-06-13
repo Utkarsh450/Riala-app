@@ -8,16 +8,28 @@ const CTABanner = () => {
       <div className="relative bg-[#5A81FA] rounded-[4rem] max-w-6xl mx-auto min-h-[280px] sm:min-h-[320px] flex items-center overflow-hidden md:overflow-visible">
 
         {/* Phone — only on md+ */}
-        <div className="hidden md:block absolute -left-4 md:-top-10 lg:left-22 -bottom-0 z-10 h-full">
-          <Image
-            src={phoneImg}
-            alt="Riala Pay App"
-            width={280}
-            height={560}
-            className="h-[135%] w-auto object-contain -translate-y-[5%]"
-            priority
-          />
-        </div>
+      {/* Phone — only on md+ */}
+ <div className="hidden md:block absolute left-[60px] lg:left-[60px] top-1/2 -translate-y-1/2
+                w-[160px] h-[160px] lg:w-[250px] lg:h-[250px]
+                rounded-full bg-[#6B8FFB] opacity-60 z-0" />
+
+  {/* Left glow effect */}
+  <div className="absolute left-0 top-1/2 -translate-y-1/2
+                  w-[300px] h-[300px]
+                  rounded-full bg-[#7B9BFF] opacity-30 blur-3xl z-0
+                  pointer-events-none" />
+
+  {/* Phone — only on md+ */}
+  <div className="hidden md:block absolute -left-4 md:-top-10 lg:left-22 -bottom-0 z-10 h-full">
+    <Image
+      src={phoneImg}
+      alt="Riala Pay App"
+      width={280}
+      height={560}
+      className="h-[135%] w-auto object-contain -translate-y-[5%]"
+      priority
+    />
+  </div>
 
         {/* Text content */}
       

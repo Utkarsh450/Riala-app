@@ -20,8 +20,8 @@ const features = [
       <Image
         src={Pocket}
         alt="Pocket"
-        width={15}
-        height={15}
+        width={13}
+        height={13}
         className="object-contain bg-blue-500"
       />
     ),
@@ -82,7 +82,7 @@ const CoreFeatures = () => {
     className="
       flex items-center justify-center gap-2
       bg-[#43495B] text-white
-      text-sm font-medium
+      text-sm font-medium mb-1
       px-5 h-[36px]
       rounded-[14px]
       shadow-sm
@@ -104,7 +104,7 @@ const CoreFeatures = () => {
       flex items-center justify-center gap-2
       bg-white text-[#43495B]
       border border-[#D9DCE5]
-      text-sm font-medium
+      text-sm font-medium mb-1
       px-5 h-[36px]
       rounded-[14px]
       hover:bg-[#F8F9FC]
