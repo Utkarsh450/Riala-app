@@ -9,7 +9,7 @@ import { Phone, Play } from "lucide-react"
 
 const Hero = () => {
   return (
-    <div className="w-full font-inter mt-4 lg:min-h-screen bg-zinc-100">
+    <div className="w-full font-inter mt-4 lg:lg:min-h-[calc(100vh+4rem)] bg-zinc-100 overflow-hidden">
 
       {/* ── DESKTOP (lg+) ── */}
       <div className="hidden lg:block relative">
