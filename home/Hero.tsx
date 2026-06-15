@@ -19,20 +19,20 @@ const Hero = () => {
           style={{ width: '1275px', height: '1275px' }} />
         <div className="absolute left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/40 pointer-events-none"
           style={{ width: '625px', height: '625px' }} />
-        <div className="absolute left-[47%] -translate-x-1/2 top-[65%] -translate-y-1/2 rounded-full pointer-events-none"
+        <div className="absolute left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50 rounded-full pointer-events-none"
           style={{ width: '380px', height: '380px' }} />
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
           <h1 className="text-9xl mr-56 tracking-tight text-[#43495B]">Welcome</h1>
-          <div className="flex gap-4 mr-20">
+          <div className="flex gap-4 mr-20 ml-20">
             <div className="relative mr-28 mt-14 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
                 <Image src={man} alt="man" width={80} height={95}
                   className="absolute bottom-0 left-0 w-full object-cover object-top" />
               </div>
             </div>
-            <h1 className="text-9xl ml-10 z-2 tracking-tight text-[#43495B]">To Riala</h1>
+            <h1 className="text-9xl ml-22 z-2 tracking-tight text-[#43495B]">To Riala</h1>
           </div>
         </div>
 
@@ -41,10 +41,13 @@ const Hero = () => {
           <h1 className="font-semibold font-['inter'] -left-4 top-22 text-[#43495B] text-2xl z-10 relative">
             The ultimate finance <br /> application is here...
           </h1>
-          <Image className="absolute top-14 left-0 translate-x-115 translate-y-44 z-10"
-            src={HandMobile} alt="HandMobile" width={440} height={440} />
-          <div className="flex flex-col gap-4 z-10 relative">
-            <div className="relative w-[95px] h-[100px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
+<Image 
+className="absolute top-14 left-0 xl:translate-x-91 lg:translate-x-70 translate-y-44 z-10"
+            src={HandMobile}
+             alt="HandMobile"
+              width={440}
+               height={440} />
+<div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
               <Image src={girl} alt="girl" width={100} height={130}
                 className="absolute -top-10 left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
             </div>
@@ -89,7 +92,8 @@ const Hero = () => {
             style={{ width: '230px', height: '230px' }} />
 
           {/* Main phone — front and center-right */}
-<div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%)' }}>            <Image
+<div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%)' }}>   
+           <Image
               src={mobile2}
               alt="Riala App"
               width={260}
