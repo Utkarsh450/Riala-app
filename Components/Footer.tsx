@@ -64,7 +64,7 @@ export default function FooterSection() {
                 placeholder="Your Email Address"
                 className="flex-1 text-sm text-gray-500 outline-none bg-transparent placeholder:text-gray-400 min-w-0 py-1"
               />
-              <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap">
+              <button className="bg-blue-500 hover:bg-[#5A81FA]/90 transition-colors text-white text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap">
                 Join News Letter
               </button>
             </div>

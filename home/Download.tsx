@@ -6,10 +6,9 @@ import MobileView from "../public/Mobileview.png"
 
 const DownloadSection = () => {
   return (
-    <div id="download" className="w-full px-4 sm:px-6 md:px-22 py-6 bg-zinc-100">
-      <div className="w-full rounded-3xl bg-white hi'] px-6 sm:px-8 md:px-28 py-8 md:py-10 border border-[#E0E2E8] overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-1">
-
+    <div id="download" className="w-full px-4 sm:px-6 md:px-22 py-4 bg-zinc-100">
+      <div className="w-full rounded-3xl bg-white hi'] px-6 sm:px-8 md:px-28 py-8 md:py-2 border border-[#E0E2E8] overflow-hidden">
+<div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-4">
          {/* LEFT CONTENT */}
 <div className="flex flex-col gap-5 w-full md:max-w-[520px] z-10 items-center text-center md:items-start md:text-left">  {/* Achievement badge */}
  <div className="flex items-center gap-1 sm:gap-2 w-fit bg-[#F3F4F6] rounded-full px-2 sm:px-3 py-1 whitespace-nowrap">
@@ -27,7 +26,7 @@ const DownloadSection = () => {
 </div>
 
   {/* Headline */}
-  <div className="flex flex-col w-full items-center md:items-start">
+  <div className="flex flex-col sm:flex-row md:flex-col sm:gap-2 w-full items-center md:items-start">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#43495B] leading-tight tracking-tight">
       Download Riala Pay
     </h1>
@@ -37,7 +36,7 @@ const DownloadSection = () => {
   </div>
 
   {/* Description */}
-  <p className="text-zinc-400 text-base leading-relaxed max-w-md">
+  <p className="text-[#9DA3B7] text-sm leading-relaxed sm:max-w-2xl max-w-md">
     Simplify you payments with Riala Pay, Paying bills nad making
     transactions has never been easier.
   </p>

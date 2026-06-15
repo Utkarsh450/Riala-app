@@ -150,14 +150,14 @@ const BlogSection = () => {
           <p className="text-sm sm:text-base font-semibold text-zinc-800">
             Get to know Riala With Our
           </p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#4f6ef7] leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#5A81FA] leading-tight">
             Blog Posts
           </h2>
         </div>
         <button
-          className="flex items-center gap-2 bg-[#4f6ef7] text-white
+          className="flex items-center gap-2 bg-[#5A81FA] text-white
                      text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl
-                     hover:bg-[#3d5ce0] transition-colors shrink-0"
+                     hover:bg-[#5A81FA]/80 transition-colors shrink-0"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
