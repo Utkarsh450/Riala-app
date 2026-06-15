@@ -6,26 +6,30 @@ import Pocket from "../public/pocket.png"
 
 const features = [
   {
-    icon: <User size={20} stroke="#6b7fc4" />,
+    icon: <User size={20} stroke="#5A81FA" />,
     title: "User Friendly",
     desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
   },
   {
-    icon: <TicketCheck size={20} stroke="#6b7fc4" />,
+    icon: <TicketCheck size={20} stroke="#5A81FA" />,
     title: "Transaction Detail",
     desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
   },
   {
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7fc4" strokeWidth="1.5">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-      </svg>
+      <Image
+        src={Pocket}
+        alt="Pocket"
+        width={13}
+        height={13}
+        className="object-contain bg-blue-500"
+      />
     ),
     title: "Pockets",
     desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
   },
   {
-    icon: <ArrowUpDown size={20} stroke="#6b7fc4" />,
+    icon: <ArrowUpDown size={20} stroke="#5A81FA" />,
     title: "Send/Request",
     desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
   },
@@ -47,13 +51,12 @@ const CoreFeatures = () => {
       <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-22">
 
         {/* LEFT */}
-        <div className="flex flex-col gap-5 items-center text-center lg:items-start lg:text-left lg:w-140 lg:shrink-0">
-          <p className="text-base font-regular tracking-widest text-zinc-400">
+<div className="flex flex-col gap-6 items-center text-center lg:items-start lg:text-left lg:w-140 lg:shrink-0">          <p className="text-base font-regular tracking-widest text-zinc-400">
             Core Features
           </p>
 
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#43495B] leading-tight">
-            Here's How We Are{" "}
+<h2 className="text-4xl lg:text-5xl font-bold text-[#43495B] leading-tight max-w-[700px]">  
+  Here's How We Are{" "}
             <span className="relative inline-block overflow-hidden bg-[#CBD7FD] text-[#5A81FA] px-2 py-1 rounded-full h-[52px] align-middle">
               <div
                 className="transition-transform duration-700 ease-in-out"
@@ -74,15 +77,13 @@ const CoreFeatures = () => {
             transactions has never been easier.
           </p>
 
-         <div className="flex flex-row gap-3 w-full mt-1">
-
-  {/* Watch Tizer */}
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-3 w-full mt-1">  {/* Watch Tizer */}
   <button
     className="
       flex items-center justify-center gap-2
       bg-[#43495B] text-white
-      text-sm font-medium
-      px-6 h-[40px]
+      text-sm font-medium mb-1
+      px-5 h-[36px]
       rounded-[14px]
       shadow-sm
       hover:bg-[#43495B]/85
@@ -90,7 +91,7 @@ const CoreFeatures = () => {
       hover:shadow-md
       transition-all duration-300
       whitespace-nowrap
-      flex-1 sm:flex-none
+      flex-none
     "
   >
     <Play size={14} className="shrink-0" fill='white' />
@@ -103,8 +104,8 @@ const CoreFeatures = () => {
       flex items-center justify-center gap-2
       bg-white text-[#43495B]
       border border-[#D9DCE5]
-      text-sm font-medium
-      px-6 h-[40px]
+      text-sm font-medium mb-1
+      px-5 h-[36px]
       rounded-[14px]
       hover:bg-[#F8F9FC]
       hover:border-[#C7CBD6]
@@ -112,7 +113,7 @@ const CoreFeatures = () => {
       hover:shadow-sm
       transition-all duration-300
       whitespace-nowrap
-      flex-1 sm:flex-none
+      flex-none
     "
   >
     <Phone size={15} className="shrink-0" />
@@ -123,15 +124,34 @@ const CoreFeatures = () => {
         </div>
 
         {/* RIGHT: feature grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-10 flex-1">
-          {features.map((f) => (
-            <div key={f.title} className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left">
-              <div className="w-12 h-12 rounded-2xl bg-[#eef0fd] flex items-center justify-center shrink-0">
-                {f.icon}
-              </div>
-              <h3 className="text-lg font-semibold text-[#1a1f36]">{f.title}</h3>
-              <p className="text-sm text-zinc-400 leading-relaxed">{f.desc}</p>
-            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 md:gap-x-20 gap-y-10 md:gap-y-14 flex-1">
+            {features.map((f) => (
+<div
+  key={f.title}
+  className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left py-2"
+>
+  <div className="w-12 h-12 rounded-2xl bg-[#EBF0FE] flex items-center justify-center shrink-0">
+     {f.title === "Pockets" ? (
+    <Image
+      src={Pocket}
+      alt="Pocket"
+      width={22}
+      height={22}
+      className="object-contain"
+    />
+  ) : (
+    f.icon
+  )}
+  </div>
+
+  <h3 className="text-lg font-semibold text-zinc-800">
+    { f.title}
+  </h3>
+
+  <p className="text-sm text-zinc-400 leading-relaxed max-w-[300px]">
+    {f.desc}
+  </p>
+</div>
           ))}
         </div>
 

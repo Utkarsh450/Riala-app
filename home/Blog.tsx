@@ -1,39 +1,122 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 
+// Cards 1 & 4 = large rectangle with real image
+// Cards 2 & 3 = square with circle/arc placeholder
 const posts = [
   {
     id: 1,
     title: 'How to get to know riala more and more b...',
     desc: 'Simplify you payments with Riala Pay, Paying bills nad making tr...',
-    image: '/blog/post1.jpg',
-    large: true,
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&auto=format&fit=crop',
+    hasImage: true,
   },
   {
     id: 2,
     title: 'How to get to know riala more and more b...',
     desc: 'Simplify you payments with Riala Pay, Paying bills nad making tr...',
-    image: '/blog/post2.jpg',
-    large: false,
+    image: '',
+    hasImage: false,
   },
   {
     id: 3,
     title: 'How to get to know riala more and more b...',
     desc: 'Simplify you payments with Riala Pay, Paying bills nad making tr...',
-    image: '/blog/post3.jpg',
-    large: false,
+    image: '',
+    hasImage: false,
   },
   {
     id: 4,
     title: 'How to get to know riala more and more b...',
     desc: 'Simplify you payments with Riala Pay, Paying bills nad making tr...',
-    image: '/blog/post4.jpg',
-    large: false,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop',
+    hasImage: true,
   },
 ];
 
-const BlogCard = ({
+/** Circle placeholder for square cards — 3 large concentric circles, center upper, bottom clips */
+const CirclePlaceholder = () => (
+  <div className="absolute inset-0 bg-[#eef0f6] overflow-hidden">
+    <svg
+      viewBox="0 0 300 300"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{
+        position: 'absolute',
+        width: '115%',
+        height: '115%',
+        top: '-8%',
+        left: '-7%',
+      }}
+    >
+      {[130, 98, 66].map((r, i) => (
+        <circle
+          key={i}
+          cx="150"
+          cy="138"
+          r={r}
+          stroke="#c8cad9"
+          strokeWidth="1.1"
+          fill="none"
+        />
+      ))}
+    </svg>
+  </div>
+);
+
+/** Image card — full image with gradient overlay, text in white at bottom */
+const ImageCard = ({
+  post,
+  className = '',
+}: {
+  post: (typeof posts)[0];
+  className?: string;
+}) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div
+      className={`relative overflow-hidden rounded-2xl bg-[#d0d4e8] group cursor-pointer ${className}`}
+    >
+      {/* Show circle placeholder while image loads */}
+      {(!imgLoaded || imgError) && <CirclePlaceholder />}
+
+      {!imgError && (
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            imgLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            onLoad={() => setImgLoaded(true)}
+            onError={() => setImgError(true)}
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+        </div>
+      )}
+
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+        <h3 className={`text-sm sm:text-base font-semibold leading-snug ${imgLoaded && !imgError ? 'text-white' : 'text-zinc-800'}`}>
+          {post.title}
+        </h3>
+        <p className={`text-xs mt-1 leading-relaxed line-clamp-1 ${imgLoaded && !imgError ? 'text-white/70' : 'text-zinc-500'}`}>
+          {post.desc}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+/** Placeholder card — circle/arc design, dark text */
+const PlaceholderCard = ({
   post,
   className = '',
 }: {
@@ -41,27 +124,14 @@ const BlogCard = ({
   className?: string;
 }) => (
   <div
-  id="blog"
-    className={`relative overflow-hidden rounded-2xl bg-[#eef0f7] group cursor-pointer ${className}`}
+    className={`relative overflow-hidden rounded-2xl bg-[#eef0f6] group cursor-pointer ${className}`}
   >
-    {/* Image */}
-    <div className="absolute inset-0">
-      <Image
-        src={post.image}
-        alt={post.title}
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      {/* Dark gradient overlay at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-    </div>
-
-    {/* Text overlay */}
-    <div className="absolute bottom-0 left-0 right-0 p-4">
-      <h3 className="text-white text-sm sm:text-base font-semibold leading-snug">
+    <CirclePlaceholder />
+    <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+      <h3 className="text-sm sm:text-base font-semibold leading-snug text-zinc-800">
         {post.title}
       </h3>
-      <p className="text-white/70 text-xs mt-1 leading-relaxed line-clamp-1">
+      <p className="text-xs mt-1 leading-relaxed line-clamp-1 text-zinc-500">
         {post.desc}
       </p>
     </div>
@@ -70,8 +140,10 @@ const BlogCard = ({
 
 const BlogSection = () => {
   return (
-    <section className="w-full bg-white px-4 sm:px-10 md:mt-28 md:px-16 lg:px-24 py-12 sm:py-16">
-
+    <section
+      id="blog"
+      className="w-full bg-white px-4 sm:px-10 md:mt-28 md:px-16 lg:px-24 py-12 sm:py-16"
+    >
       {/* Header */}
       <div className="flex items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
         <div>
@@ -82,48 +154,47 @@ const BlogSection = () => {
             Blog Posts
           </h2>
         </div>
-
-        <button className="flex items-center gap-2 bg-[#4f6ef7] text-white
-                           text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl
-                           hover:bg-[#3d5ce0] transition-colors shrink-0">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" strokeWidth="1.5">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
+        <button
+          className="flex items-center gap-2 bg-[#4f6ef7] text-white
+                     text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl
+                     hover:bg-[#3d5ce0] transition-colors shrink-0"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
           </svg>
           View All Posts
         </button>
       </div>
 
-      {/* Grid */}
-      {/* 
-        Layout matches screenshot:
-        - Row 1: large card (spans 2 cols) | small card
-        - Row 2: small card | small card (spans 2 cols)
-        On mobile: all cards stack in single column
+      {/*
+        Grid — 3 columns on lg:
+        Row 1: ImageCard (col-span-2, tall) | PlaceholderCard (col-span-1)
+        Row 2: PlaceholderCard (col-span-1) | ImageCard (col-span-2, tall)
       */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[220px] sm:auto-rows-[200px] md:auto-rows-[220px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        {/* Card 1 — large, spans 2 cols on lg */}
-        <BlogCard
+        {/* Row 1 */}
+        <ImageCard
           post={posts[0]}
-          className="lg:col-span-2 sm:row-span-1"
+          className="lg:col-span-2 h-[220px] sm:h-[240px] md:h-[300px]"
+        />
+        <PlaceholderCard
+          post={posts[1]}
+          className="h-[220px] sm:h-[240px] md:h-[300px]"
         />
 
-        {/* Card 2 — top right */}
-        <BlogCard post={posts[1]} />
-
-        {/* Card 3 — bottom left */}
-        <BlogCard post={posts[2]} />
-
-        {/* Card 4 — large bottom right, spans 2 cols on lg */}
-        <BlogCard
+        {/* Row 2 */}
+        <PlaceholderCard
+          post={posts[2]}
+          className="h-[220px] sm:h-[240px] md:h-[300px]"
+        />
+        <ImageCard
           post={posts[3]}
-          className="lg:col-span-2"
+          className="lg:col-span-2 h-[220px] sm:h-[240px] md:h-[300px]"
         />
 
       </div>
-
     </section>
   );
 };
