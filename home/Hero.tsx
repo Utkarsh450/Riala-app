@@ -9,14 +9,14 @@ import { Phone, Play } from "lucide-react"
 
 const Hero = () => {
   return (
-    <div className="w-full font-inter mt-4 lg:min-h-screen bg-zinc-100 overflow-hidden">
+    <div className="w-full font-inter mt-4 lg:min-h-screen bg-zinc-100">
 
       {/* ── DESKTOP (lg+) ── */}
       <div className="hidden lg:block relative">
 
         {/* Background circles */}
         <div className="absolute left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none"
-          style={{ width: '1275px', height: '1275px' }} />
+          style={{ width: '1200px', height: '1200px' }} />
         <div className="absolute left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/40 pointer-events-none"
           style={{ width: '625px', height: '625px' }} />
         <div className="absolute left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50 rounded-full pointer-events-none"
@@ -38,7 +38,7 @@ const Hero = () => {
 
         {/* Bottom row */}
         <div className="w-full flex items-center justify-between px-34 py-10 mt-10">
-          <h1 className="font-semibold font-['inter'] -left-4 top-22 text-[#43495B] text-2xl z-10 relative">
+          <h1 className="font-semibold font-['inter'] -left-14 top-22 text-[#43495B] text-2xl z-10 relative">
             The ultimate finance <br /> application is here...
           </h1>
 <Image 
@@ -70,13 +70,13 @@ className="absolute top-14 left-0 xl:translate-x-91 lg:translate-x-70 translate-
           {/* Title — behind everything, large, centered at top */}
           <div className="absolute top-6 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
             <h1
-              className=" tracking-tight text-[#43495B] leading-none text-center"
+              className=" tracking-tight text-[#43495B] leading-none text-center mr-52"
               style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}
             >
               Welcome
             </h1>
             <h1
-              className=" tracking-tight text-[#43495B] leading-none text-center"
+              className=" tracking-tight text-[#43495B] leading-none text-center ml-22"
               style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}
             >
               To Riala
@@ -85,14 +85,14 @@ className="absolute top-14 left-0 xl:translate-x-91 lg:translate-x-70 translate-
 
           {/* Circles — centred in the hero area */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none z-10"
-            style={{ width: '460px', height: '460px' }} />
+            style={{ width: '700px', height: '700px' }} />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-300/40 bg-zinc-50/20 pointer-events-none z-10"
-            style={{ width: '340px', height: '340px' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-50/60 pointer-events-none z-10"
-            style={{ width: '230px', height: '230px' }} />
+            style={{ width: '460px', height: '460px' }} />
+          <div className="absolute top-[68%] left-[47%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-50 pointer-events-none z-10"
+            style={{ width: '400px', height: '400px' }} />
 
           {/* Main phone — front and center-right */}
-<div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%)' }}>   
+<div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%) translateY(5%)' }}>   
            <Image
               src={mobile2}
               alt="Riala App"
@@ -113,7 +113,7 @@ className="absolute top-14 left-0 xl:translate-x-91 lg:translate-x-70 translate-
               ▶ Watch Tizer
             </div>
             <div className="flex items-center gap-2 px-5 py-2.5 font-medium text-xs rounded-2xl text-zinc-800 bg-zinc-50 border border-zinc-300 cursor-pointer">
-              📞 Contact Us
+              <Phone size={15}/> Contact Us
             </div>
           </div>
         </div>
